@@ -1,0 +1,15 @@
+﻿{
+  "AppSettings": {
+
+  },
+  "Data": {
+    "DefaultConnection": {
+      "ConnectionString": "Server=(local);Database=DATABASE;User ID=USER;Password=PASS;MultipleActiveResultSets=true"
+    }
+  },
+  "EntityFramework": {
+    "ApplicationDbContext": {
+      "ConnectionStringKey": "Data:DefaultConnection:ConnectionString"
+    }
+  }
+}
