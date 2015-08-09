@@ -14,6 +14,8 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Template.Web", "src\Templat
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{47AA8D33-510F-49D0-A675-D278E0EB27E6}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Template.Core", "src\Template.Core\Template.Core.xproj", "{FFA8241F-D5D8-4910-B213-D137F7DBD354}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,11 +26,16 @@ Global
 		{A98F03B5-0923-45CB-9A6F-190B7BCBAC29}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A98F03B5-0923-45CB-9A6F-190B7BCBAC29}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A98F03B5-0923-45CB-9A6F-190B7BCBAC29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFA8241F-D5D8-4910-B213-D137F7DBD354}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFA8241F-D5D8-4910-B213-D137F7DBD354}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFA8241F-D5D8-4910-B213-D137F7DBD354}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFA8241F-D5D8-4910-B213-D137F7DBD354}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{A98F03B5-0923-45CB-9A6F-190B7BCBAC29} = {71825CD2-1B6D-475E-9236-ED3F525E7361}
+		{FFA8241F-D5D8-4910-B213-D137F7DBD354} = {71825CD2-1B6D-475E-9236-ED3F525E7361}
 	EndGlobalSection
 EndGlobal
