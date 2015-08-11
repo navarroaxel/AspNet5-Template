@@ -12,6 +12,8 @@ using Microsoft.AspNet.Hosting;
 using Microsoft.Data.Entity;
 using Microsoft.Framework.Configuration;
 using Microsoft.Framework.Runtime;
+using Template.Web.Model.Entities;
+using Template.Web.Repositories;
 
 namespace Template.Web
 {
@@ -35,7 +37,7 @@ namespace Template.Web
             services
                 .AddEntityFramework()
                 .AddSqlServer()
-                .AddDbContext<Model.TemplateContext>(options => options.UseSqlServer(Configuration["Data:DefaultConnection:ConnectionString"]));
+                .AddDbContext<TemplateContext>(options => options.UseSqlServer(Configuration["Data:DefaultConnection:ConnectionString"]));
 
             services.AddMvc().Configure<MvcOptions>(options =>
             {
@@ -52,6 +54,13 @@ namespace Template.Web
 
                 options.OutputFormatters.Insert(position, formatter);
             });
+
+            ConfigureRepositories(services);
+        }
+
+        private void ConfigureRepositories(IServiceCollection services)
+        {
+            services.AddScoped<UsersRepository>();
         }
 
         public void Configure(IApplicationBuilder app)

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Template.Web.Model
+namespace Template.Web.Model.Entities
 {
     public class TemplateContext : DbContext
     {

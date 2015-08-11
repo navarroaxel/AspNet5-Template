@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Template.Web.Model
+namespace Template.Web.Model.Entities
 {
     [Table("Users")]
     public class User

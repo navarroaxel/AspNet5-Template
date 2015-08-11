@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Mvc;
-using Template.Web.Model;
+using Template.Web.Model.Entities;
+using Template.Web.Repositories;
 
 // For more information on enabling Web API for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -12,17 +13,20 @@ namespace Template.Web.Api
     [Route("api/[controller]")]
     public class HomeController : Controller
     {
-        private TemplateContext DbContext { get; set; }
-        public HomeController(TemplateContext context)
+        private UsersRepository UsersRepository { get; set; }
+        public PersistentRepository PersistentRepository { get; set; }
+
+        public HomeController(UsersRepository usersRepository, PersistentRepository persistentRepository)
         {
-            DbContext = context;
+            UsersRepository = usersRepository;
+            PersistentRepository = persistentRepository;
         }
 
         // GET: api/values
         [HttpGet]
         public IEnumerable<object> Get()
         {
-            return DbContext.Users;
+            return UsersRepository.ToList();
         }
 
         // GET api/values/5
